@@ -1,0 +1,46 @@
+deconstruction_task:
+  description: >
+    Analyze the initial {topic} and break it down into a comprehensive list of 
+    specific sub-tasks, technical requirements, and functional components. 
+    Ensure the breakdown is logical and covers every aspect of the objective.
+  expected_output: >
+    A structured list of granular sub-tasks and requirements necessary to 
+    complete the {topic} project.
+  agent: task_deconstructor
+
+research_task:
+  description: >
+    Using the sub-tasks identified, conduct thorough research to find external 
+    data, industry best practices, and current market trends related to {topic}. 
+    Identify potential challenges or innovative solutions used by others in the field.
+  expected_output: >
+    A detailed summary of external research findings, data points, and 
+    benchmarks for each major component of the project.
+  agent: intelligence_scout
+
+prioritization_task:
+  description: >
+    Review the list of sub-tasks and the external research gathered. 
+    Evaluate each item based on its potential impact, level of urgency, 
+    and required effort. Create a final roadmap that clearly dictates 
+    the order of operations.
+  expected_output: >
+    A prioritized execution plan that ranks tasks from highest to lowest 
+    priority, including brief justifications for the ranking. Please construct 
+    them in json formatted list, below is the example.
+    
+    [
+        {
+            "dateOnCalender": "date",
+            "DueDate": "date",
+            "task": "task name",
+            "priority": 1,
+            "links": "links",
+            "Description": "description",
+            "TimeToComplete": 2
+        }, 
+        {...}
+    ]
+    please only output json format.
+  agent: strategic_prioritizer
+  output_file: "result/output.json"
