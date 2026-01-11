@@ -1,8 +1,7 @@
-Module 2: Working with ggplot2 via R
-After reading the first two chapters of Wickham's book
-, please work through the exercises that he lists in Chapter 2. For full credit, please post three screen shots or image files of your practice work by Sunday evening. Please feel free to post any questions you have about the exercises on this thread, or in the Community Forum. You are welcome to answer other students' questions if you have come across similar issues and found a way to work through the problem (this will count towards your three responses).
-For practice assignments such as this one, points are awarded for completing the exercises and putting in the effort to do the work rather than for mastery of the work. Points are only deducted if the work is incomplete or does not fulfill the assignment.
-Please also watch the following short video to learn more about my grading philosophy, especially with the GGplot2 assignments, which might feel really new and confusing at first.  If you have questions or need help, please feel free to email me, and I look forward to seeing what you come up with this week.
-
-
-
+Objective: Create a Python program that processes student scores to determine a final grade. This task tests your understanding of lists, functions, and conditional logic.
+Instructions:
+Input: Prompt the user to enter five distinct assignment scores (0–100). Store these values in a list.
+Logic: Write a function called calculate_grade that takes this list as an argument. Inside the function, calculate the average score.
+Conditionals: Use if-elif-else statements to assign a letter grade based on the average (e.g., A for 90+, B for 80+, etc.).
+Output: Print the calculated average (rounded to two decimal places) and the corresponding letter grade to the console.
+Success Criteria: The program handles invalid inputs gracefully and accurately converts numerical data into categorical grades.

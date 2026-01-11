@@ -28,7 +28,7 @@ class Calender():
             mcps = [
                 "crewai-amp:research-tools"
             ],
-            verbose=True
+            verbose=False
         )
     
     @agent
