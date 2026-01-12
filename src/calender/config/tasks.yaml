@@ -27,7 +27,8 @@ prioritization_task:
   expected_output: >
     A prioritized execution plan that ranks tasks from highest to lowest 
     priority, including brief justifications for the ranking. Please construct 
-    them in json formatted list, below is the example.
+    them in json formatted list, below is the example. And remember, I want the task lower 
+    then 10 words.
     
     [
         {
