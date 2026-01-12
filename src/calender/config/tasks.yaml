@@ -38,7 +38,6 @@ prioritization_task:
             "priority": 1,
             "links": "links",
             "Description": "description",
-            "TimeToComplete": 2
         }, 
         {...}
     ]
