@@ -22,8 +22,8 @@ prioritization_task:
   description: >
     Review the list of sub-tasks and the external research gathered. 
     Evaluate each item based on its potential impact, level of urgency, 
-    and required effort. Create a final roadmap that clearly dictates 
-    the order of operations.
+    and required effort. Also how many hours each task is estimated to take. 
+    Create a final roadmap that clearly dictates the order of operations.
   expected_output: >
     A prioritized execution plan that ranks tasks from highest to lowest 
     priority, including brief justifications for the ranking. Please construct 
@@ -34,6 +34,8 @@ prioritization_task:
         {
             "dateOnCalendar": "date",
             "DueDate": "date",
+            "start_time": "HH:MM in 24hr format",
+            "end_time": "HH:MM in 24hr format",
             "task": "task name",
             "priority": 1,
             "links": "links",

@@ -5,3 +5,4 @@ Logic: Write a function called calculate_grade that takes this list as an argume
 Conditionals: Use if-elif-else statements to assign a letter grade based on the average (e.g., A for 90+, B for 80+, etc.).
 Output: Print the calculated average (rounded to two decimal places) and the corresponding letter grade to the console.
 Success Criteria: The program handles invalid inputs gracefully and accurately converts numerical data into categorical grades.
+The due day of this assignment will be on 1/30 2026
