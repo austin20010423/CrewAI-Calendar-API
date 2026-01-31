@@ -3,6 +3,7 @@ deconstruction_task:
     Analyze the initial {topic} and break it down into a comprehensive list of 
     specific sub-tasks, technical requirements, and functional components. 
     Ensure the breakdown is logical and covers every aspect of the objective.
+    They should be practical details of how it's executed.
   expected_output: >
     A structured list of granular sub-tasks and requirements necessary to 
     complete the {topic} project.
@@ -24,11 +25,12 @@ prioritization_task:
     Evaluate each item based on its potential impact, level of urgency, 
     and required effort. Also how many hours each task is estimated to take. 
     Create a final roadmap that clearly dictates the order of operations.
+    This road map should not exceed 7 task items.
   expected_output: >
     A prioritized execution plan that ranks tasks from highest to lowest 
     priority, including brief justifications for the ranking. Please construct 
-    them in json formatted list, below is the example. And remember, I want the task lower 
-    then 10 words.
+    them in json formatted list, below is the example. And remember, I want the task as lower as possible words, maximum 
+    15 words.
     
     [
         {
