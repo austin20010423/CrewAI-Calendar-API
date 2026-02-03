@@ -25,7 +25,7 @@ prioritization_task:
     Evaluate each item based on its potential impact, level of urgency, 
     and required effort. Also how many hours each task is estimated to take. 
     Create a final roadmap that clearly dictates the order of operations.
-    This road map should not exceed 7 task items.
+    This road map should create task number below seven, should not exceed seven, depends on complexity of topic.
   expected_output: >
     A prioritized execution plan that ranks tasks from highest to lowest 
     priority, including brief justifications for the ranking. Please construct 
