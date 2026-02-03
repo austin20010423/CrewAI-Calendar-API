@@ -48,4 +48,3 @@ prioritization_task:
     please only output json format, do not output any other entities in the output.
     no ```json tags, no extra words.
   agent: strategic_prioritizer
-  output_file: "result/output.json"
