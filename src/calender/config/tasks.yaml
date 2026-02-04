@@ -1,31 +1,11 @@
-deconstruction_task:
+execution_task:
   description: >
-    Analyze the initial {topic} and break it down into a comprehensive list of 
-    specific sub-tasks, technical requirements, and functional components. 
-    Ensure the breakdown is logical and covers every aspect of the objective.
-    They should be practical details of how it's executed.
-  expected_output: >
-    A structured list of granular sub-tasks and requirements necessary to 
-    complete the {topic} project.
-  agent: task_deconstructor
-
-research_task:
-  description: >
-    Using the sub-tasks identified, conduct thorough research to find external 
-    data, industry best practices, and current market trends related to {topic}. 
-    Identify potential challenges or innovative solutions used by others in the field.
-  expected_output: >
-    A detailed summary of external research findings, data points, and 
-    benchmarks for each major component of the project.
-  agent: intelligence_scout
-
-prioritization_task:
-  description: >
-    Review the list of sub-tasks and the external research gathered. 
-    Evaluate each item based on its potential impact, level of urgency, 
-    and required effort. Also how many hours each task is estimated to take. 
-    Create a final roadmap that clearly dictates the order of operations.
-    This road map should create task number below seven, should not exceed seven, depends on complexity of topic.
+    You are responsible for the entire project planning lifecycle for {topic}.
+    1. Analyze the objective and deconstruct it into specific sub-tasks.
+    2. Conduct research to find relevant external links, books, or data.
+    3. Create a prioritized execution roadmap based on your analysis and research.
+    
+    The roadmap should have 7 items or fewer. Keep task descriptions under 15 words.
   expected_output: >
     A prioritized execution plan that ranks tasks from highest to lowest 
     priority, including brief justifications for the ranking. Please construct 
@@ -47,4 +27,4 @@ prioritization_task:
     ]
     please only output json format, do not output any other entities in the output.
     no ```json tags, no extra words.
-  agent: strategic_prioritizer
+  agent: calendar_manager

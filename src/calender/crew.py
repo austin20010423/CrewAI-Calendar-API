@@ -16,53 +16,20 @@ class Calender():
     tasks: List[Task]
 
     @agent
-    def task_deconstructor(self) -> Agent:
+    def calendar_manager(self) -> Agent:
         return Agent(
-            config=self.agents_config['task_deconstructor'], 
-            max_iter=1,
-            verbose=False
-        )
-
-    @agent
-    def intelligence_scout(self) -> Agent:
-        return Agent(
-            config=self.agents_config['intelligence_scout'], 
+            config=self.agents_config['calendar_manager'], 
             mcps = [
                 "crewai-amp:research-tools"
             ],
             cache=True,
-            max_iter=1,
-            verbose=False
-        )
-    
-    @agent
-    def strategic_prioritizer(self) -> Agent:
-        return Agent(
-            config=self.agents_config['strategic_prioritizer'], 
-            max_iter=1,
-            inject_date=True,
-            verbose=False
-        )
-
-
-    @task
-    def deconstruction_task(self) -> Task:
-        return Task(
-            config=self.tasks_config['deconstruction_task'], 
-            async_execution=True
+            verbose=True
         )
 
     @task
-    def research_task(self) -> Task:
+    def execution_task(self) -> Task:
         return Task(
-            config=self.tasks_config['research_task'], 
-            async_execution=True
-        )
-
-    @task
-    def prioritization_task(self) -> Task:
-        return Task(
-            config=self.tasks_config['prioritization_task'], 
+            config=self.tasks_config['execution_task'], 
         )
 
     @crew
