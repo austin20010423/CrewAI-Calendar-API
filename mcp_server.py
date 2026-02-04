@@ -1,6 +1,7 @@
 import sys
 import os
 import logging
+from contextlib import redirect_stdout
 
 # Ensure src modules can be imported
 sys.path.append(os.path.join(os.path.dirname(__file__), "src"))
@@ -32,8 +33,9 @@ def task_and_schedule_planer(topic: str) -> str:
     logger.info(f"Executing task_and_schedule_planer with topic: {topic}")
     
     try:
-        # Execute the crew run function
-        result = run(topic)
+        # Execute the crew run function, redirecting stdout to stderr to prevent MCP JSON pollution
+        with redirect_stdout(sys.stderr):
+            result = run(topic)
         
         # The result from run() might be complex, ensure it's a string
         return str(result)

@@ -31,7 +31,7 @@ class Calender():
                 "crewai-amp:research-tools"
             ],
             cache=True,
-            verbose=True
+            verbose=False
         )
 
     @task
