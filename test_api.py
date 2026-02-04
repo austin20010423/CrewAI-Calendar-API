@@ -1,6 +1,7 @@
 import urllib.request
 import json
 import os
+import time
 
 def test_api():
     url = "http://127.0.0.1:8000/run"
@@ -32,4 +33,8 @@ def test_api():
         print(f"\nAn error occurred: {e}")
 
 if __name__ == "__main__":
+    # test api time
+    start_time = time.time()
     test_api()
+    end_time = time.time()
+    print(f"\nTotal time: {end_time - start_time} seconds")
