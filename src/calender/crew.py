@@ -17,8 +17,16 @@ class Calender():
 
     @agent
     def calendar_manager(self) -> Agent:
+        # Load preferences
+        pref_path = 'knowledge/user_preference.txt'
+        preferences = ""
+        if os.path.exists(pref_path):
+             with open(pref_path, 'r', encoding='utf-8') as f:
+                 preferences = f.read()
+
         return Agent(
             config=self.agents_config['calendar_manager'], 
+            backstory=self.agents_config['calendar_manager']['backstory'] + f"\n\nUSER PREFERENCES:\n{preferences}",
             mcps = [
                 "crewai-amp:research-tools"
             ],
